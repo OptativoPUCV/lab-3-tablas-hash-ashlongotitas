@@ -96,9 +96,16 @@ HashMap * createMap(long capacity)
     return map;
 }
 
-void eraseMap(HashMap * map,  char * key) {    
-
-
+void eraseMap(HashMap * map,  char * key) 
+{    
+    if (map == NULL || key == NULL) return;
+    Pair * pair_eliminar = searchMap(map, key);
+    if (pair_eliminar != NULL)
+    {
+        free(pair_eliminar->key);
+        pair_eliminar->key = NULL;
+        map->size--;
+    }
 }
 
 Pair * searchMap(HashMap * map,  char * key) 
