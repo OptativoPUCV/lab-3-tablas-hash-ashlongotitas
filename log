@@ -34,3 +34,9 @@ hashmap.c:111:33: error: 'HashMap {aka struct HashMap}' has no member named 'buc
          Pair * pair_actual = map->bucjets[posicion_actual];
                                  ^~
 9e8214e
+Fri, Apr 18, 2025  9:03:14 PM: 
+ hashmap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+ tests:  8|3
+total_score: 40/70
+3fbb699

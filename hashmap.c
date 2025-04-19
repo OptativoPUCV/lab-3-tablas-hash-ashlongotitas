@@ -108,7 +108,7 @@ Pair * searchMap(HashMap * map,  char * key)
     for (int i = 0; i < map->capacity; i++)
     {
         long posicion_actual = (posicion_inicial + i) % map ->capacity;
-        Pair * pair_actual = map->bucjets[posicion_actual];
+        Pair * pair_actual = map->buckets[posicion_actual];
         if (pair_actual == NULL) return NULL;
         if (pair_actual->key != NULL && is_equal(pair_actual->key, key))
         {
