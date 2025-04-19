@@ -80,7 +80,7 @@ void enlarge(HashMap * map)
     long old_capacity = map->capacity;
      
     map->capacity *= 2;
-    map->buckets = (Pair **) malloc (sizeof(Pair *) * map->capacity);
+    map->buckets = (Pair **) calloc (map->capacity, sizeof(Pair *));
     map->size = 0;
     map->current = -1;
     
