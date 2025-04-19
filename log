@@ -46,3 +46,13 @@ Fri, Apr 18, 2025  9:18:12 PM:
  tests:  11|2
 total_score: 50/70
 8e2af96
+Fri, Apr 18, 2025  9:26:05 PM: 
+ hashmap.c | 13 +++++++++++--
+ 1 file changed, 11 insertions(+), 2 deletions(-)
+Compilation failed
+In file included from test.c:4:0:
+hashmap.c: In function 'firstMap':
+hashmap.c:134:55: error: 'Pair {aka struct Pair}' has no member named 'kwy'; did you mean 'key'?
+         if (map->buckets[i] != NULL && map->buckets[i]->kwy != NULL)
+                                                       ^~
+72f46e8

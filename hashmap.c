@@ -126,8 +126,17 @@ Pair * searchMap(HashMap * map,  char * key)
     return NULL;
 }
 
-Pair * firstMap(HashMap * map) {
-
+Pair * firstMap(HashMap * map) 
+{
+    if (map ==  NULL) return NULL;
+    for (long i = 0; i < map->capacity; i++)
+    {
+        if (map->buckets[i] != NULL && map->buckets[i]->kwy != NULL)
+        {
+            map->current = i;
+            return map->buckets[i];
+        }
+    }
     return NULL;
 }
 
