@@ -56,3 +56,9 @@ hashmap.c:134:55: error: 'Pair {aka struct Pair}' has no member named 'kwy'; did
          if (map->buckets[i] != NULL && map->buckets[i]->kwy != NULL)
                                                        ^~
 72f46e8
+Fri, Apr 18, 2025  9:26:15 PM: 
+ hashmap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+ tests:  13|2
+total_score: 50/70
+63c19da
