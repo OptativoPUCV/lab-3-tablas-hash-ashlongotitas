@@ -101,9 +101,21 @@ void eraseMap(HashMap * map,  char * key) {
 
 }
 
-Pair * searchMap(HashMap * map,  char * key) {   
-
-
+Pair * searchMap(HashMap * map,  char * key) 
+{   
+    if (map == NULL || key == NULL) return NULL;
+    long posicion_inicial = hash(key, map->capacity);
+    for (int i = 0; i < map->capacity; i++)
+    {
+        long posicion_actual = (posicion_inicial + i) % map ->capacity;
+        Pair * pair_actual = map->bucjets[posicion_actual];
+        if (pair_actual == NULL) return NULL;
+        if (pair_actual->key != NULL && is_equal(pair_actual->key, key))
+        {
+            map->current = posicion_actual;
+            return pair_actual;
+        }
+    }
     return NULL;
 }
 

@@ -16,3 +16,13 @@ Fri, Apr 18, 2025  8:56:34 PM:
  tests:  5|4
 total_score: 30/70
 13da1cd
+Fri, Apr 18, 2025  9:02:50 PM: 
+ hashmap.c | 18 +++++++++++++++---
+ 1 file changed, 15 insertions(+), 3 deletions(-)
+Compilation failed
+In file included from test.c:4:0:
+hashmap.c: In function 'searchMap':
+hashmap.c:111:33: error: 'HashMap {aka struct HashMap}' has no member named 'bucjets'; did you mean 'buckets'?
+         Pair * pair_actual = map->bucjets[posicion_actual];
+                                 ^~
+725ce27
